@@ -1,0 +1,6 @@
+names:
+  0: car
+nc: 1
+path: D:/Python/sup/YOLO/data_set
+train: D:/Python/sup/YOLO/data_set/images/train
+val: D:/Python/sup/YOLO/data_set/images/val
