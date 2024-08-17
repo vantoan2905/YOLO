@@ -16,17 +16,8 @@ import matplotlib.patches as patches
 import seaborn as sns
 import torch
 
-# Test data
 path_to_data_test = './data/testing_images'
 path_to_data_train = './data/training_images'
-
-
-
-# ./data/training_images/vid_4_940.jpg
-# ./data/testing_images/vid_5_26560.jpg
-# show one image in training dataset
-
-
 
 
 class YOLOv8:
