@@ -15,18 +15,18 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import seaborn as sns
 import torch
-
-path_to_data_test = './data/testing_images'
-path_to_data_train = './data/training_images'
+import sys
 
 
+
+# model using yolov8
 class YOLOv8:
     def __init__(self):
         # Load model
         self.model = YOLO('yolov8s.pt')
         # Data path 
-        self.train_data = path_to_data_train
-        self.test_data = path_to_data_test
+        self.train_data = './data/training_images'
+        self.test_data = './data/testing_images'
         # size of image
         self.width = 676
         self.height = 380
@@ -142,8 +142,12 @@ class YOLOv8:
         cv2.destroyAllWindows()
 
 
+
+
+
+
 if __name__ == '__main__':
-    import sys
+
     if sys.argv[1] == 'yolo':
         yolo = YOLOv8()
         if sys.argv[2] == 'prepare_data':
@@ -154,5 +158,4 @@ if __name__ == '__main__':
             yolo.predict()
         elif sys.argv[2] == 'draw_bounding_boxes':
             yolo.draw_bounding_boxes(sys.argv[3], sys.argv[4])
-
 
